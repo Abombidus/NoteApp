@@ -1,23 +1,24 @@
 import "./home.css";
 import NoteItem from "../../components/note-item/NoteItem";
 import { CiSearch } from "react-icons/ci";
-import { notes } from "../../Data";
 import { BsPlusLg } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
-function Notes() {
+function Notes({ noteBox }) {
+  const navigate = useNavigate();
   return (
     <div>
       <section>
         <header className="note-header">
           <h2>My Notes</h2>
-          <input type="text" autoFocus placeholder="keywords..." />
+          {/* <input type="text" autoFocus placeholder="keywords..." /> */}
           <button className="btn" id="search-btn">
             <CiSearch />
           </button>
         </header>
 
         <div className="container">
-          {notes.map(({ id, title, details, date }) => {
+          {noteBox.map(({ id, title, details, date }) => {
             return (
               <NoteItem
                 key={id}
@@ -30,7 +31,12 @@ function Notes() {
           })}
         </div>
 
-        <button className="btn add-btn">
+        <button
+          className="btn add-btn"
+          onClick={() => {
+            navigate("/new-note");
+          }}
+        >
           <BsPlusLg />
         </button>
       </section>

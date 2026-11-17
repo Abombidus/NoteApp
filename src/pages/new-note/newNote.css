@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .form {
@@ -15,4 +16,30 @@
 
 .form input {
   font-size: 2rem;
+  background: transparent;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  /* text-align:center; */
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+}
+
+.form input:focus {
+  color: var(--color-white);
+  padding: 0.5rem;
+  border: 2px solid gray;
+}
+
+textarea {
+  padding: 0.5rem;
+  font-size: x-large;
+  border-radius: 1rem;
+  background: transparent;
+}
+
+textarea:focus {
+  padding: 0.5rem;
+  color: var(--color-white);
+  padding: 0.5rem;
+  border: 2px solid gray;
 }
