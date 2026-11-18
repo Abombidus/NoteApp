@@ -16,30 +16,31 @@
 
 .form input {
   font-size: 2rem;
-  background: transparent;
   margin-top: 2rem;
   padding: 0.5rem;
-  /* text-align:center; */
+  border: 2px solid var(--color-pale);
   margin-bottom: 3rem;
+  color: var(--color-pale);
   border-radius: 1rem;
 }
 
 .form input:focus {
   color: var(--color-white);
   padding: 0.5rem;
-  border: 2px solid gray;
+  border: 2px solid var(--color-white);
 }
 
 textarea {
+  color: var(--color-pale);
   padding: 0.5rem;
+  border: 2px solid var(--color-pale);
   font-size: x-large;
   border-radius: 1rem;
-  background: transparent;
 }
 
 textarea:focus {
   padding: 0.5rem;
   color: var(--color-white);
   padding: 0.5rem;
-  border: 2px solid gray;
+  border: 2px solid var(--color-white);
 }

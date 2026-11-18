@@ -1,9 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./editNote.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
+// import { useState } from "react";
 
-function EditNote() {
+// function EditNote({ noteBox, setNoteBox }) {
+function EditNote({ noteBox, setNoteBox }) {
+  const { id } = useParams();
+  const searchNote = noteBox.find((note) => {
+    note.id == id;
+  });
+  console.log(searchNote.title);
+
+  // const [title, setTitle] = useState(searchNote.title);
+  // const [details, setDetails] = useState(searchNote.details);
   return (
     <div>
       <section>
@@ -19,8 +29,23 @@ function EditNote() {
         {/* <h2 className="text-head">Edit note</h2> */}
 
         <form className="form">
-          <input type="text" autoFocus placeholder="Title" />
-          <textarea row="28" placeholder="Note details...."></textarea>
+          <input
+            type="text"
+            autoFocus
+            placeholder="Title"
+            // value={title}
+            // onChange={(e) => {
+            //   setTitle(e.target.value);
+            // }}
+          />
+          <textarea
+            row="28"
+            placeholder="Note details...."
+            // value={details}
+            // onChange={(e) => {
+            //   setDetails(e.target.value);
+            // }}
+          ></textarea>
         </form>
       </section>
     </div>
