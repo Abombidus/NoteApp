@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/notes/Home";
 import NewNote from "./pages/new-note/NewNote";
 import EditNote from "./pages/edit-note/EditNote";
-// import { notes } from "./Data";
 import { useState } from "react";
 import { useEffect } from "react";
 
